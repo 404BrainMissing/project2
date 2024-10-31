@@ -1,10 +1,16 @@
 <script>
-    import "../app.css";
-    import { Button} from 'flowbite-svelte'
-    
-    // export const prerender = true;
-    let menuOpen = false;
+  // @ts-nocheck
+  import '../app.css';
+  import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
+
+  
+  // Redirect to /home on mount
+  onMount(() => {
+      goto('/project2/'); 
+  });
 </script>
+
   
   <svelte:head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,9 +27,9 @@
       </div>
   
       <div class="space-x-4 hidden lg:flex" style="margin-right: 10px">
-        <Button color="light" href="/">Home</Button>
-        <Button color="light" href="/request">Request</Button>
-        <Button color="light" href="/contact">Contact</Button>
+        <Button color="light" href="/project2/">Home</Button>
+        <Button color="light" href="/project2/request">Request</Button>
+        <Button color="light" href="/project2/contact">Contact</Button>
       </div>
   
 
