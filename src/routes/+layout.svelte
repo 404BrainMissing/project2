@@ -7,9 +7,7 @@
   export let name = "Deployed by Sustainablers";
 
   // Redirect to /home on mount
-  onMount(() => {
-      goto('/project2/'); 
-  });
+
 </script>
   
   <svelte:head>
