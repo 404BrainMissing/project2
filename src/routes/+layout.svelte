@@ -94,7 +94,7 @@
             <a class="tab" href="/project2/contact" aria-label="contact">Contact</a>
         </nav>
         <button class="basket-button" aria-label="basket">
-            <!-- Basket icon -->
+            Basket icon
         </button>
     </header>
     <slot />
@@ -102,3 +102,20 @@
 <footer>
     {name}
 </footer>
+<!-- <main>
+    <header>
+        <h1 class="title">World Peas</h1>
+        <nav class="tabs">
+            <a class="tab" href="/" aria-label="home">Home</a>
+            <a class="tab" href="/request" aria-label="shop">Request</a>
+            <a class="tab" href="/contact" aria-label="contact">Contact</a>
+        </nav>
+        <button class="basket-button" aria-label="basket">
+           
+        </button>
+    </header>
+    <slot />
+</main>
+<footer>
+    {name}
+</footer> -->
