@@ -12,6 +12,7 @@ export default {
 				sans: ["Sora", ...defaultTheme.fontFamily.sans],
 			},
 colors: {// flowbite-svelte
+
   primary: {
     "50": "#fef2e0",
     "100": "#fedeb1",
@@ -24,6 +25,7 @@ colors: {// flowbite-svelte
     "800": "#e96706",
     "900": "#df4c05",
   },
+
 },
 },
 },
