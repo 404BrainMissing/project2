@@ -31,7 +31,7 @@
         </div> -->
 
         <div class="flex-grow space-x-16 hidden lg:flex" style="margin-left: 480px">
-            <a href="/project2" class="text-primary hover:underline font-bold text-white">HOME</a>
+            <a href="/project2/" class="text-primary hover:underline font-bold text-white">HOME</a>
             <a href="/project2/request" class="text-primary hover:underline font-bold text-white">REQUEST</a>
             <a href="/project2/contact" class="text-primary hover:underline font-bold text-white">CONTACTS</a>
         </div>
@@ -53,7 +53,7 @@
             <a href="/contact" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
         </div> -->
         <div class="bg-gray-800 text-white space-y-2 px-4 py-2 lg:hidden">
-            <a href="/project2" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
+            <a href="/project2/" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
             <a href="/project2/request" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>
             <a href="/project2/contact" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
         </div>
