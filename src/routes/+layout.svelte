@@ -20,8 +20,9 @@
 <nav style="background-color: #FFEF00;" class="p-4 fixed w-full top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo Image -->
-        <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" />
-
+        <!-- svelte-ignore a11y_missing_attribute -->
+        <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" />
+        <!-- <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> -->
         <!-- Centered Button Container -->
         <!-- <div class="flex-grow space-x-16 hidden lg:flex" style="margin-left: 480px">
             <a href="/" class="text-primary hover:underline font-bold text-white">HOME</a>
@@ -30,7 +31,7 @@
         </div> -->
 
         <div class="flex-grow space-x-16 hidden lg:flex" style="margin-left: 480px">
-            <a href="/projec2/" class="text-primary hover:underline font-bold text-white">HOME</a>
+            <a href="/" class="text-primary hover:underline font-bold text-white">HOME</a>
             <a href="/project2/request" class="text-primary hover:underline font-bold text-white">REQUEST</a>
             <a href="/project2/contact" class="text-primary hover:underline font-bold text-white">CONTACTS</a>
         </div>
@@ -52,7 +53,7 @@
             <a href="/contact" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
         </div> -->
         <div class="bg-gray-800 text-white space-y-2 px-4 py-2 lg:hidden">
-            <a href="/project2/" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
+            <a href="/" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
             <a href="/project2/request" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>
             <a href="/project2/contact" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
         </div>
