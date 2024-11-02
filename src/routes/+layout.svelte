@@ -34,7 +34,7 @@
             <a href="/project2/" class="text-primary hover:underline font-bold text-black">HOME</a>
             <a href="/project2/request" class="text-primary hover:underline font-bold text-black">REQUEST</a>
             <a href="/project2/contact" class="text-primary hover:underline font-bold text-black">CONTACTS</a>
-        </div>
+        </div> 
 
         <div class="lg:hidden">
             <!-- svelte-ignore a11y_consider_explicit_label -->
@@ -53,9 +53,9 @@
             <a href="/contact" class="block text-black hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
         </div> -->
         <div class="bg-gray-800 text-white space-y-2 px-4 py-2 lg:hidden">
-            <a href="/project2/" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
-            <a href="/project2/request" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>
-            <a href="/project2/contact" class="block text-white hover:bg-gray-700 focus:ring-4 focus:ring-gray-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
+            <a href="/project2/" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
+            <a href="/project2/request" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>
+            <a href="/project2/contact" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
         </div>
     {/if}
 </nav>
