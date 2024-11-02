@@ -20,9 +20,9 @@
 <nav style="background-color: #BA8E23;" class="p-4 fixed w-full top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo Image -->
-        <!-- svelte-ignore a11y_missing_attribute -->
-        <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" />
-        <!-- <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> 
+        <!-- svelte-ignore a11y_missing_attribute --> 
+         <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" />
+            <!-- <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> 
          <div class="flex-grow space-x-16 hidden lg:flex" style="margin-left: 480px">
             <a href="/" class="text-primary hover:underline font-bold text-black">HOME</a>
             <a href="/request" class="text-primary hover:underline font-bold black">REQUEST</a>
