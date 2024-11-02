@@ -123,21 +123,23 @@
 
     <div>
         <div class="bd">
-            <div>
+            <!-- <div> -->
                 <h1 class="text-center text-3xl font-bold mt-6 flex items-center justify-center gap-2">
                         <!-- Icon with Tailwind CSS color and size adjustments -->
                      
                         OLONGAPO CITY EMERGENCY HOTLINES<Icon.PhoneSolid class="w-10 h-10 " />
                       </h1>
+                      </div>
+                      </div>
                   
-                <Card size="none" class="mt-4">
+                <!-- <Card size="none" class="mt-4">
 
                     <Tabs class="w-full">
                         <div class="flex justify-center space-x-4">
                              <TabItem open title="ALL"  >
                             
                                 <div class="flex flex-wrap justify-around w-full">
-                                    <!-- Disaster Risk Reduction and Management Office -->
+
                                     <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                                         <p class="text-sm text-gray-500 dark:text-gray-400"><b>ALL:</b></p>
                                         <p><b>Disaster Risk Reduction and Management Office</b></p>
@@ -146,7 +148,6 @@
                                         <p>Fire Search and Rescue Tel: 223-6876</p>
                                     </div>
                     
-                                    <!-- Barangay Contacts Section -->
                                     <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                                         <p><b>Barangay Contacts</b></p>
                                         <p>New Asinan: 223-5708</p>
@@ -168,7 +169,6 @@
                                         <p>West Tapinac: 223-3434</p>
                                     </div>
                     
-                                    <!-- Police Stations Section -->
                                     <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                                         <p><b>Police Stations</b></p>
                                         <p>OCPO: 222-5731</p>
@@ -186,7 +186,7 @@
                                         <p>BJMP 164: 602-7330</p>
                                     </div>
                     
-                                    <!-- Additional Contacts Section -->
+                                  
                                     <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                                         <p><b>Additional Contacts</b></p>
                                         <p>BFP Olongapo: 610-9114 / 223-1415</p>
@@ -249,7 +249,7 @@
                 </Card>
             </div> 
         </div>
-    </div>
+    </div> -->
  
     <!-- <Tabs class="w-full defaultClass=flex rounded-lg " >
         <TabItem open title="ALL ">
