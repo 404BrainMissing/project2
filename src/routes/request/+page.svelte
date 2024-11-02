@@ -10,6 +10,11 @@
 		typeOfAssistance: "",
 		additionalInfo: "",
 	};
+	
+	// Reactive statement to toggle "Others" input requirement and clear value if not needed
+	$: if (formValues.typeOfAssistance !== 'others') {
+		formValues.others = ""; // Clear "Others" input if "Others" is not selected
+	}
 </script>
 
 <style>
@@ -22,7 +27,6 @@
 </style>
 
 <div class="bg">
-	
 	<h1 class="text-center text-3xl font-bold mt-6">EMERGENCY REQUEST FORM</h1>
 	<main class="mx-auto w-full max-w-xl p-8 mt-8 bg-white rounded-lg shadow-md">
 		<div class="flex flex-col gap-8">
@@ -71,10 +75,10 @@
 								required
 							>
 								<option disabled selected>Select Type of Assistance</option>
-								<option value="medical">Food</option>
-								<option value="fire">Water</option>
-								<option value="rescue">Oxygen</option>
-								<option value="others">Ambulance</option>
+								<option value="food">Food</option>
+								<option value="water">Water</option>
+								<option value="oxygen">Oxygen</option>
+								<option value="ambulance">Ambulance</option>
 								<option value="medical">Medical Aid</option>
 								<option value="fire">Fire Fighter</option>
 								<option value="rescue">Rescue</option>
@@ -84,12 +88,14 @@
 					</div>
 
 					<div>
+						<Label class="mb-2 inline-block">Specify if Other</Label>
 						<Input
 							type="text"
 							name="others"
 							bind:value={formValues.others}
 							placeholder="Specify if Other"
-							required
+							disabled={formValues.typeOfAssistance !== 'others'}
+							required={formValues.typeOfAssistance === 'others'}
 						/>
 					</div>
 
@@ -111,6 +117,4 @@
 			</Card>
 		</div>
 	</main>
-
-	
 </div>
