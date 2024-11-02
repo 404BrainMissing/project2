@@ -129,269 +129,173 @@
                      
                         OLONGAPO CITY EMERGENCY HOTLINES<Icon.PhoneSolid class="w-10 h-10 " />
                       </h1>
-                      </div>
-                      </div>
-                  
-                <!-- <Card size="none" class="mt-4">
+                   
+   <Card size="none" class="mt-4">
 
-                    <Tabs class="w-full">
-                        <div class="flex justify-center space-x-4">
-                             <TabItem open title="ALL"  >
-                            
-                                <div class="flex flex-wrap justify-around w-full">
-
-                                    <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                                        <p class="text-sm text-gray-500 dark:text-gray-400"><b>ALL:</b></p>
-                                        <p><b>Disaster Risk Reduction and Management Office</b></p>
-                                        <p>Globe: 0917-306-5966</p>
-                                        <p>Smart: 0998-593-7446</p>
-                                        <p>Fire Search and Rescue Tel: 223-6876</p>
-                                    </div>
-                    
-                                    <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                                        <p><b>Barangay Contacts</b></p>
-                                        <p>New Asinan: 223-5708</p>
-                                        <p>Banicain: 611-0382</p>
-                                        <p>Barretto: 222-4298</p>
-                                        <p>East Bajac-Bajac: 223-8350</p>
-                                        <p>East Tapinac: 223-5314</p>
-                                        <p>Gordon Heights: 223-5497</p>
-                                        <p>New Kababae: 222-7828</p>
-                                        <p>Kalaklan: 224-6983</p>
-                                        <p>New Kalalake: 222-3964</p>
-                                        <p>Mabayuan: 602-3200</p>
-                                        <p>New Cabalan: 224-5418</p>
-                                        <p>New Ilalim: 602-0328</p>
-                                        <p>Old Cabalan: 603-1700</p>
-                                        <p>Pag-asa: 222-8037 / 0948-413-2993</p>
-                                        <p>Sta. Rita: 222-9225</p>
-                                        <p>West Bajac-Bajac: 222-5173</p>
-                                        <p>West Tapinac: 223-3434</p>
-                                    </div>
-                    
-                                    <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                                        <p><b>Police Stations</b></p>
-                                        <p>OCPO: 222-5731</p>
-                                        <p>Station 1 (Triangle): 222-5101 / 0918-576-3537</p>
-                                        <p>Station 2 (New Kababae): 222-1092 / 0998-598-5549</p>
-                                        <p>Station 3 (Magsaysay): 222-1908 / 0998-598-5561</p>
-                                        <p>Station 4 (New Cabalan): 223-0026 / 0998-598-5567</p>
-                                        <p>Station 5 (Sta. Rita): 222-0984 / 0998-598-5567</p>
-                                        <p>Station 6 (Barretto): 223-7846</p>
-                                        <p>SAF/TOC: 0907-554-9053 / 0919-245-0666</p>
-                                        <p>SOCO: 602-4444</p>
-                                        <p>PNP Maritime Group: 0998-594-0246</p>
-                                        <p>Philippine Coast Guard: 0998-585-8197</p>
-                                        <p>Philippine Navy (San Antonio): 0917-882-2347</p>
-                                        <p>BJMP 164: 602-7330</p>
-                                    </div>
-                    
-                                  
-                                    <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                                        <p><b>Additional Contacts</b></p>
-                                        <p>BFP Olongapo: 610-9114 / 223-1415</p>
-                                        <p>City Hall: 611-4800</p>
-                                        <p>PLDT Olongapo: 0939-908-7828 / 0919-0620-799</p>
-                                        <p>Red Cross Olongapo: 222-2181 / 0917-889-2733</p>
-                                        <p>OTMPS: 611-4188 / 0928-917-8420</p>
-                                        <p>Subic Water: 252-2960</p>
-                                        <p>DOH: 961-652-4658</p>
-                                    </div>
-                                    
-                                    <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                                        <p><b>More Contacts</b></p>
-                                        <p>NGCP: 223-3272</p>
-                                        <p>City Sports: 223-5906 / 956-8028</p>
-                                        <p>CSSU JLGHM: 602-1229</p>
-                                        <p>OLLMC: 602-2906</p>
-                                        <p>Social Development Center: 223-1193</p>
-                                        <p>Wildlife: 223-762 / 602-4307</p>
-                                        <p>ESMO: 223-9346 / 602-7330</p>
-                                        <p>CSWDO: 611-4828</p>
-                                        <p>OEDC: 223-2401 / 222-0103 / 222-0089</p>
-                                        <p>Alternative Contacts: 0920-974-8462 / 0917-861-5020</p>
-                                    </div>
-                                </div>
-                            
-                        </TabItem>
-                    
-                        <TabItem title="Settings">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">
-                                <b>Settings:</b>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </TabItem>
-                    
-                        <TabItem title="Users">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">
-                                <b>Users:</b>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </TabItem>
-                    
-                        <TabItem title="Dashboard">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">
-                                <b>Dashboard:</b>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </TabItem>
-                    
-                        <TabItem disabled>
-                            <span slot="title" class="text-gray-400 dark:text-gray-500">Disabled</span>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">
-                                <b>Disabled:</b>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </TabItem>
-                        </div>
-                    </Tabs>
-                    
-                </Card>
-            </div> 
-        </div>
-    </div> -->
- 
-    <!-- <Tabs class="w-full defaultClass=flex rounded-lg " >
-        <TabItem open title="ALL ">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            <b>ALL</b>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            <div class="flex flex-wrap justify-around w-full">
+    <Tabs class="flex flex-wrap justify-center text-xl text-black">
+    <TabItem open title="ALL" class="flex-1 sm:flex-none text-xl text-black">
+      <p class="text-xl text-black">
+     
+        <div class="flex flex-wrap justify-around w-full text-xl text-black">
             
-                <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <p class="text-sm text-gray-500 dark:text-gray-400"><b>ALL:</b></p>
-                    <p><b>Disaster Risk Reduction and Management Office</b></p>
-                    <p>Globe: 0917-306-5966</p>
-                    <p>Smart: 0998-593-7446</p>
-                    <p>Fire Search and Rescue Tel: 223-6876</p>
-                </div>
-        
+            <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                 
-                <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <p><b>Barangay Contacts</b></p>
-                    <p>New Asinan: 223-5708</p>
-                    <p>Banicain: 611-0382</p>
-                    <p>Barretto: 222-4298</p>
-                    <p>East Bajac-Bajac: 223-8350</p>
-                    <p>East Tapinac: 223-5314</p>
-                    <p>Gordon Heights: 223-5497</p>
-                    <p>New Kababae: 222-7828</p>
-                    <p>Kalaklan: 224-6983</p>
-                    <p>New Kalalake: 222-3964</p>
-                    <p>Mabayuan: 602-3200</p>
-                    <p>New Cabalan: 224-5418</p>
-                    <p>New Ilalim: 602-0328</p>
-                    <p>Old Cabalan: 603-1700</p>
-                    <p>Pag-asa: 222-8037 / 0948-413-2993</p>
-                    <p>Sta. Rita: 222-9225</p>
-                    <p>West Bajac-Bajac: 222-5173</p>
-                    <p>West Tapinac: 223-3434</p>
-                </div>
-        
-          
-                <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <p><b>Police Stations</b></p>
-                    <p>OCPO: 222-5731</p>
-                    <p>Station 1 (Triangle): 222-5101 / 0918-576-3537</p>
-                    <p>Station 2 (New Kababae): 222-1092 / 0998-598-5549</p>
-                    <p>Station 3 (Magsaysay): 222-1908 / 0998-598-5561</p>
-                    <p>Station 4 (New Cabalan): 223-0026 / 0998-598-5567</p>
-                    <p>Station 5 (Sta. Rita): 222-0984 / 0998-598-5567</p>
-                    <p>Station 6 (Barretto): 223-7846</p>
-                    <p>SAF/TOC: 0907-554-9053 / 0919-245-0666</p>
-                    <p>SOCO: 602-4444</p>
-                    <p>PNP Maritime Group: 0998-594-0246</p>
-                    <p>Philippine Coast Guard: 0998-585-8197</p>
-                    <p>Philippine Navy (San Antonio): 0917-882-2347</p>
-                    <p>BJMP 164: 602-7330</p>
-                </div>
-        
-          
-                <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <p><b>Additional Contacts</b></p>
-                    <p>BFP Olongapo: 610-9114 / 223-1415</p>
-                    <p>City Hall: 611-4800</p>
-                    <p>PLDT Olongapo: 0939-908-7828 / 0919-0620-799</p>
-                    <p>Red Cross Olongapo: 222-2181 / 0917-889-2733</p>
-                    <p>OTMPS: 611-4188 / 0928-917-8420</p>
-                    <p>Subic Water: 252-2960</p>
-                    <p>DOH: 961-652-4658</p>
-                </div>
-                
-                <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                    <p><b>Additional Contacts</b></p>
-                    <p>NGCP: 223-3272</p>
-                    <p>City Sports: 223-5906 / 956-8028</p>
-                    <p>CSSU JLGHM: 602-1229</p>
-                    <p>OLLMC: 602-2906</p>
-                    <p>Social Development Center: 223-1193</p>
-                    <p>Wildlife: 223-762 / 602-4307</p>
-                    <p>ESMO: 223-9346 / 602-7330</p>
-                    <p>CSWDO: 611-4828</p>
-                    <p>OEDC: 223-2401 / 222-0103 / 222-0089</p>
-                    <p>Alternative Contacts: 0920-974-8462 / 0917-861-5020</p>
-                </div>
-                
+                <p><b>Disaster Risk Reduction and Management Office</b></p>
+                <p>Globe: 0917-306-5966</p>
+                <p>Smart: 0998-593-7446</p>
+                <p>Fire Search and Rescue Tel: 223-6876</p>
             </div>
-        </TabItem>
-        <TabItem title="Settings">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            <b>Settings:</b>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </TabItem>
-        <TabItem title="Users">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            <b>Users:</b>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </TabItem>
-        <TabItem title="Dashboard">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            <b>Dashboard:</b>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </TabItem>
-        <TabItem disabled>
-          <span slot="title" class="text-gray-400 dark:text-gray-500">Disabled</span>
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            <b>Disabled:</b>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </TabItem>
-      </Tabs>
-   -->
-   <Tabs class="flex flex-wrap justify-center">
-    <TabItem open title="Profile" class="flex-1 sm:flex-none">
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Profile:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+    
+            
+            <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                <p><b>Barangay Contacts</b></p>
+                <p>New Asinan: 223-5708</p>
+                <p>Banicain: 611-0382</p>
+                <p>Barretto: 222-4298</p>
+                <p>East Bajac-Bajac: 223-8350</p>
+                <p>East Tapinac: 223-5314</p>
+                <p>Gordon Heights: 223-5497</p>
+                <p>New Kababae: 222-7828</p>
+                <p>Kalaklan: 224-6983</p>
+                <p>New Kalalake: 222-3964</p>
+                <p>Mabayuan: 602-3200</p>
+                <p>New Cabalan: 224-5418</p>
+                <p>New Ilalim: 602-0328</p>
+                <p>Old Cabalan: 603-1700</p>
+                <p>Pag-asa: 222-8037 / 0948-413-2993</p>
+                <p>Sta. Rita: 222-9225</p>
+                <p>West Bajac-Bajac: 222-5173</p>
+                <p>West Tapinac: 223-3434</p>
+            </div>
+    
+      
+            <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                <p><b>Police Stations</b></p>
+                <p>OCPO: 222-5731</p>
+                <p>Station 1 (Triangle): 222-5101 / 0918-576-3537</p>
+                <p>Station 2 (New Kababae): 222-1092 / 0998-598-5549</p>
+                <p>Station 3 (Magsaysay): 222-1908 / 0998-598-5561</p>
+                <p>Station 4 (New Cabalan): 223-0026 / 0998-598-5567</p>
+                <p>Station 5 (Sta. Rita): 222-0984 / 0998-598-5567</p>
+                <p>Station 6 (Barretto): 223-7846</p>
+                <p>SAF/TOC: 0907-554-9053 / 0919-245-0666</p>
+                <p>SOCO: 602-4444</p>
+                <p>PNP Maritime Group: 0998-594-0246</p>
+                <p>Philippine Coast Guard: 0998-585-8197</p>
+                <p>Philippine Navy (San Antonio): 0917-882-2347</p>
+                <p>BJMP 164: 602-7330</p>
+            </div>
+    
+      
+            <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                <p><b>Additional Contacts</b></p>
+                <p>BFP Olongapo: 610-9114 / 223-1415</p>
+                <p>City Hall: 611-4800</p>
+                <p>PLDT Olongapo: 0939-908-7828 / 0919-0620-799</p>
+                <p>Red Cross Olongapo: 222-2181 / 0917-889-2733</p>
+                <p>OTMPS: 611-4188 / 0928-917-8420</p>
+                <p>Subic Water: 252-2960</p>
+                <p>DOH: 961-652-4658</p>
+            </div>
+            
+            <div class="border rounded-lg p-4 m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+                <p><b>Additional Contacts</b></p>
+                <p>NGCP: 223-3272</p>
+                <p>City Sports: 223-5906 / 956-8028</p>
+                <p>CSSU JLGHM: 602-1229</p>
+                <p>OLLMC: 602-2906</p>
+                <p>Social Development Center: 223-1193</p>
+                <p>Wildlife: 223-762 / 602-4307</p>
+                <p>ESMO: 223-9346 / 602-7330</p>
+                <p>CSWDO: 611-4828</p>
+                <p>OEDC: 223-2401 / 222-0103 / 222-0089</p>
+                <p>Alternative Contacts: 0920-974-8462 / 0917-861-5020</p>
+            </div>
+            
+        </div>
     </TabItem>
-    <TabItem title="Settings" class="flex-1 sm:flex-none">
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Settings:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+    <TabItem title="Disaster Risk Reduction and Management Office" class="flex-1 sm:flex-none">
+      <p class="text-xl text-black">
+        <div class="text-center text-xl text-black">
+            <p class="mt-4"><b>Disaster Risk Reduction and Management Office</b></p>
+            <p>Globe: 0917-306-5966</p>
+            <p>Smart: 0998-593-7446</p>
+            <p>Fire Search and Rescue Tel: 223-6876</p>
+            
+            </div>
+
+ 
     </TabItem>
-    <TabItem title="Users" class="flex-1 sm:flex-none">
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Users:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+    <TabItem title="Barangay Contacts" class="flex-1 sm:flex-none">
+      <p class="text-xl text-black">
+        <div class="text-xl text-black text-center">
+            <p><b>Barangay Contacts</b></p>
+            <p>New Asinan: 223-5708</p>
+            <p>Banicain: 611-0382</p>
+            <p>Barretto: 222-4298</p>
+            <p>East Bajac-Bajac: 223-8350</p>
+            <p>East Tapinac: 223-5314</p>
+            <p>Gordon Heights: 223-5497</p>
+            <p>New Kababae: 222-7828</p>
+            <p>Kalaklan: 224-6983</p>
+            <p>New Kalalake: 222-3964</p>
+            <p>Mabayuan: 602-3200</p>
+            <p>New Cabalan: 224-5418</p>
+            <p>New Ilalim: 602-0328</p>
+            <p>Old Cabalan: 603-1700</p>
+            <p>Pag-asa: 222-8037 / 0948-413-2993</p>
+            <p>Sta. Rita: 222-9225</p>
+            <p>West Bajac-Bajac: 222-5173</p>
+            <p>West Tapinac: 223-3434</p>
+        </div>
+
     </TabItem>
-    <TabItem title="Dashboard" class="flex-1 sm:flex-none">
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Dashboard:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+    <TabItem title="Police Stations"  class="flex-1 sm:flex-none text-black">
+        <p class="text-xl text-black">
+            <div class="text-xl text-black text-center">
+            <p><b>Police Stations</b></p>
+            <p>OCPO: 222-5731</p>
+            <p>Station 1 (Triangle): 222-5101 / 0918-576-3537</p>
+            <p>Station 2 (New Kababae): 222-1092 / 0998-598-5549</p>
+            <p>Station 3 (Magsaysay): 222-1908 / 0998-598-5561</p>
+            <p>Station 4 (New Cabalan): 223-0026 / 0998-598-5567</p>
+            <p>Station 5 (Sta. Rita): 222-0984 / 0998-598-5567</p>
+            <p>Station 6 (Barretto): 223-7846</p>
+            <p>SAF/TOC: 0907-554-9053 / 0919-245-0666</p>
+            <p>SOCO: 602-4444</p>
+            <p>PNP Maritime Group: 0998-594-0246</p>
+            <p>Philippine Coast Guard: 0998-585-8197</p>
+            <p>Philippine Navy (San Antonio): 0917-882-2347</p>
+            <p>BJMP 164: 602-7330</p>
+        </div>
     </TabItem>
-    <TabItem disabled class="flex-1 sm:flex-none">
-      <span slot="title" class="text-gray-400 dark:text-gray-500">Disabled</span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Disabled:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TabItem>
+    
+    <TabItem title="Additional Contact" class="flex-1 sm:flex-none text-2xl text-black">
+        <p class="text-sm text-black dark:text-gray-400">
+            <div class="text-xl text-black dark:text-gray-900 text-center">
+            <p><b>Additional Contacts</b></p>
+            <p>BFP Olongapo: 610-9114 / 223-1415</p>
+            <p>City Hall: 611-4800</p>
+            <p>PLDT Olongapo: 0939-908-7828 / 0919-0620-799</p>
+            <p>Red Cross Olongapo: 222-2181 / 0917-889-2733</p>
+            <p>OTMPS: 611-4188 / 0928-917-8420</p>
+            <p>Subic Water: 252-2960</p>
+            <p>DOH: 961-652-4658</p>
+            <p>NGCP: 223-3272</p>
+            <p>City Sports: 223-5906 / 956-8028</p>
+            <p>CSSU JLGHM: 602-1229</p>
+            <p>OLLMC: 602-2906</p>
+            <p>Social Development Center: 223-1193</p>
+            <p>Wildlife: 223-762 / 602-4307</p>
+            <p>ESMO: 223-9346 / 602-7330</p>
+            <p>CSWDO: 611-4828</p>
+            <p>OEDC: 223-2401 / 222-0103 / 222-0089</p>
+            <p>Alternative Contacts: 0920-974-8462 / 0917-861-5020</p>
+        </div>
+
+      </TabItem>
+
   </Tabs>
-  
+  </Card>
+</div>
+</div>
