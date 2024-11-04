@@ -17,6 +17,7 @@
 	}
 </script>
 
+<!-- svelte-ignore css_unused_selector -->
 <style>
 	.bg {
 		background-color: #03045E;
@@ -24,6 +25,7 @@
 		padding: 20px;
 		color: #FFFFFF;
 	}
+	
 </style>
 
 <div class="bg">
@@ -109,9 +111,10 @@
 						/>
 					</div>
 
-					<div class="flex flex-col sm:flex-row justify-between mt-6">
-						<Button color="blue" type="reset">Clear Form</Button>
+					<div class="flex flex-col sm:flex-row justify-between mt-6 gap-2 ">
+						<Button color="blue" type="reset" >Clear Form</Button>
 						<Button type="submit" color="blue">Submit</Button>
+
 					</div>
 				</form>
 			</Card>
