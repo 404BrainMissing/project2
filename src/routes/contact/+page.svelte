@@ -28,13 +28,13 @@
   }
 	.bg {
 		background-color: #03045E;
-		margin-top: 30px;
+		margin-top: 20px;
 		padding: 20px;
 		color: #FFFFFF;
 	}
     .bd {
 		background-color: #03045E;
-		margin-top: 0px;
+
 		padding: 20px;
 		color: #FFFFFF;
 	}
@@ -44,7 +44,7 @@
 <div class="bg min-h-screen flex items-center justify-center">
     
 	<div class="w-full max-w-lg px-4">
-		<h1 class="text-center text-3xl font-bold mt-6">CONTACT FORM</h1>
+		<h1 class="text-center text-3xl font-bold m-px">CONTACT FORM</h1>
 
 		<div class="flex flex-col gap-8 mt-6">
 			<Card size="none">
@@ -124,13 +124,13 @@
     <div>
         <div class="bd">
             <!-- <div> -->
-                <h1 class="text-center text-3xl font-bold mt-6 flex items-center justify-center gap-2">
+                <h1 class="text-center text-3xl font-bold m-px flex items-center justify-center gap-2">
                         <!-- Icon with Tailwind CSS color and size adjustments -->
                      
                         OLONGAPO CITY EMERGENCY HOTLINES<Icon.PhoneSolid class="w-10 h-10 " />
                       </h1>
                    
-   <Card size="none" class="mt-4">
+   <Card size="none" class="mt-2">
 
     <Tabs class="flex flex-wrap justify-center text-xl text-black">
     <TabItem open title="ALL" class="flex-1 sm:flex-none text-xl text-black">

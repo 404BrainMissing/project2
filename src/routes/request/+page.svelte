@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { Card, Input, Button, Select, } from "flowbite-svelte";
+	import { Card, Input, Button, Select, Checkbox, Modal } from "flowbite-svelte";
 	import Label from "flowbite-svelte/Label.svelte";
+	import { BadgeCheckSolid } from 'flowbite-svelte-icons';
 
+	let submitModal = false;
 	let formValues = {
 		fullName: "",
 		contactNumber: "",
@@ -10,14 +12,34 @@
 		typeOfAssistance: "",
 		additionalInfo: "",
 	};
-	
+	let termsAccepted = false; // Bind this to the checkbox's checked state
+
 	// Reactive statement to toggle "Others" input requirement and clear value if not needed
 	$: if (formValues.typeOfAssistance !== 'others') {
 		formValues.others = ""; // Clear "Others" input if "Others" is not selected
 	}
+
+	function handleFormSubmit(event: Event) {
+		if (event.target instanceof HTMLFormElement && event.target.checkValidity()) {
+			submitModal = true; // Open modal if form is valid
+		}
+	}
+
+	// Function to close the modal and reset the form
+	function resetForm() {
+		submitModal = false;
+		formValues = {
+			fullName: "",
+			contactNumber: "",
+			address: "",
+			others: "",
+			typeOfAssistance: "",
+			additionalInfo: "",
+		};
+		termsAccepted = false; // Uncheck the checkbox
+	}
 </script>
 
-<!-- svelte-ignore css_unused_selector -->
 <style>
 	.bg {
 		background-color: #03045E;
@@ -25,7 +47,6 @@
 		padding: 20px;
 		color: #FFFFFF;
 	}
-	
 </style>
 
 <div class="bg">
@@ -33,7 +54,7 @@
 	<main class="mx-auto w-full max-w-xl p-8 mt-8 bg-white rounded-lg shadow-md">
 		<div class="flex flex-col gap-8">
 			<Card size="none">
-				<form class="flex flex-col gap-6">
+				<form class="flex flex-col gap-6" on:submit={handleFormSubmit}>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 						<div>
 							<Label class="mb-2 inline-block">Fullname</Label>
@@ -107,18 +128,27 @@
 							type="text"
 							name="additionalInfo"
 							bind:value={formValues.additionalInfo}
-							placeholder="Any information that may helpful"
+							placeholder="Any information that may be helpful"
 						/>
 					</div>
-
-					<div class="flex flex-col sm:flex-row justify-between mt-6 gap-2 ">
-						<Button color="blue" type="reset" >Clear Form</Button>
+					<div>
+						<Checkbox class="m-0 space-x-1 rtl:space-x-reverse" bind:checked={termsAccepted} required>
+							I agree with the terms and conditions.
+						</Checkbox>
+					</div>
+					<div class="flex flex-col sm:flex-row justify-between mt-6 gap-2">
+						<Button color="blue" type="reset">Clear Form</Button>
 						<Button type="submit" color="blue">Submit</Button>
-
 					</div>
 				</form>
 			</Card>
 		</div>
 	</main>
-	<p>hi</p>
+	<Modal bind:open={submitModal} size="xs" autoclose>
+		<div class="text-center">
+			<BadgeCheckSolid class="mx-auto mb-4 w-12 h-12 text-black" />
+			<h3 class="mb-5 text-lg font-normal text-black ">Please wait for a couple of minutes to give your assistance needed</h3>
+			<Button color="blue" on:click={resetForm}>Close</Button>
+		</div>
+	</Modal>
 </div>
