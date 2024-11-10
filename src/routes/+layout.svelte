@@ -61,11 +61,11 @@
             <a href="/request" class="block text-black hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>
             <a href="/contact" class="block text-black hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
         </div>
-        <div class="bg-yellow-500  text-white space-y-2 px-4 py-2 lg:hidden">
+        <!-- <div class="bg-yellow-500  text-white space-y-2 px-4 py-2 lg:hidden">
             <a href="/project2/" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
             <a href="/project2/request" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>
             <a href="/project2/contact" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
-        </div>
+        </div> -->
     {/if}
 </nav>
 
