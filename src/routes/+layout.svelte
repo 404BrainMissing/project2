@@ -24,7 +24,7 @@
         <!-- svelte-ignore a11y_missing_attribute --> 
          <!-- <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" /> -->
        
-           
+<!--            
          <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> 
  
    <h1 class="font-bold text-black"> EMERGENCY HOTLINE</h1>
@@ -32,17 +32,17 @@
             <a href="/" class="text-primary hover:underline font-bold text-black">HOME</a>
             <a href="/request" class="text-primary hover:underline font-bold text-black">REQUEST</a>
             <a href="/contact" class="text-primary hover:underline font-bold text-black">CONTACTS</a>
-        </div>
+        </div> -->
 
 
     <!-- svelte-ignore a11y_missing_attribute -->
-    <!-- <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" />
+    <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" />
        <h1 class="font-bold text-black"> EMERGENCY HOTLINE</h1>
         <div class="flex-grow space-x-16 hidden lg:flex text-2xl" style="margin-left: 310px">
            <a href="/project2/" class="text-primary hover:underline font-bold text-black">HOME</a>
            <a href="/project2/request" class="text-primary hover:underline font-bold text-black">REQUEST</a>
            <a href="/project2/contact" class="text-primary hover:underline font-bold text-black">CONTACTS</a>
-       </div>  -->
+       </div> 
 
 
         <div class="lg:hidden"> 
