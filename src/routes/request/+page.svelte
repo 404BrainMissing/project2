@@ -1,3 +1,5 @@
+page.svelte
+
 <script lang="ts">
 	import { Card, Input, Button, Select, Checkbox, Modal } from "flowbite-svelte";
 	import Label from "flowbite-svelte/Label.svelte";
@@ -12,14 +14,32 @@
 		typeOfAssistance: "",
 		additionalInfo: "",
 	};
-	let termsAccepted = false; // Bind this to the checkbox's checked state
-
+	let termsAccepted = false;
+	let phoneError = ""; // Error message for invalid phone number
+	
 	// Reactive statement to toggle "Others" input requirement and clear value if not needed
 	$: if (formValues.typeOfAssistance !== 'others') {
 		formValues.others = ""; // Clear "Others" input if "Others" is not selected
 	}
 
+	// Function to validate the phone number format
+	function isValidPhoneNumber(phoneNumber: string) {
+		const regex = /^(09\d{9}|\+63\d{10})$/;
+		return regex.test(phoneNumber);
+	}
+
 	function handleFormSubmit(event: Event) {
+		event.preventDefault();
+		
+		// Check if phone number is valid
+		if (!isValidPhoneNumber(formValues.contactNumber)) {
+			phoneError = "Please enter a valid Philippine contact number starting with +63 or 09";
+			return;
+		} else {
+			phoneError = ""; // Clear error if phone number is valid
+		}
+
+		// Proceed if form is valid
 		if (event.target instanceof HTMLFormElement && event.target.checkValidity()) {
 			submitModal = true; // Open modal if form is valid
 		}
@@ -37,15 +57,21 @@
 			additionalInfo: "",
 		};
 		termsAccepted = false; // Uncheck the checkbox
+		phoneError = ""; // Clear phone error on reset
 	}
 </script>
 
 <style>
 	.bg {
 		background-color: #03045E;
-		margin-top: 50px;
+		margin-top: 20px;
 		padding: 20px;
 		color: #FFFFFF;
+	}
+	.error {
+		color: red;
+		font-size: 0.875rem;
+		margin-top: 0.25rem;
 	}
 </style>
 
@@ -75,6 +101,9 @@
 								placeholder="Input your Contact Number"
 								required
 							/>
+							{#if phoneError}
+								<div class="error">{phoneError}</div>
+							{/if}
 						</div>
 					</div>
 
@@ -137,7 +166,7 @@
 						</Checkbox>
 					</div>
 					<div class="flex flex-col sm:flex-row justify-between mt-6 gap-2">
-						<Button color="blue" type="reset">Clear Form</Button>
+						<Button color="blue" type="reset" on:click={resetForm}>Clear Form</Button>
 						<Button type="submit" color="blue">Submit</Button>
 					</div>
 				</form>

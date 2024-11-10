@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { Card, Input, Button, Select } from "flowbite-svelte";
+	import { Card, Input, Button, Tabs, TabItem, } from "flowbite-svelte";
 	import Label from "flowbite-svelte/Label.svelte";
-    import { Tabs, TabItem, TimelineItem,} from 'flowbite-svelte';
-    import * as Icon from 'flowbite-svelte-icons';
-	let formValues = {
+  import * as Icon from 'flowbite-svelte-icons';
+
+
+	let formValues2 = {
 		FullName: "",
 		Number: "",
 		email: "",
@@ -56,7 +57,7 @@
 							<Input
 								type="text"
 								name="fullName"
-								bind:value={formValues.FullName}
+								bind:value={formValues2.FullName}
 								placeholder="Input your Full Name"
 								required
 							/>
@@ -70,7 +71,7 @@
 							<Input
 								type="text"
 								name="address"
-								bind:value={formValues.email}
+								bind:value={formValues2.email}
 								placeholder="email@gmail.com or email@yahoo.com"
 								required
 							/>
@@ -83,7 +84,7 @@
 							<Input
 								type="text"
 								name="contactNumber"
-								bind:value={formValues.Number}
+								bind:value={formValues2.Number}
 								placeholder="09++++++++++"
 								required
 							/>
@@ -96,7 +97,7 @@
 							<Input
 								type="text"
 								name="others"
-								bind:value={formValues.reason}
+								bind:value={formValues2.reason}
 								placeholder="Your reason for Contact"
 								required
 							/>
