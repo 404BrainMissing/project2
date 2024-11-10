@@ -1,11 +1,11 @@
-page.svelte
-
 <script lang="ts">
 	import { Card, Input, Button, Select, Checkbox, Modal } from "flowbite-svelte";
 	import Label from "flowbite-svelte/Label.svelte";
-	import { BadgeCheckSolid } from 'flowbite-svelte-icons';
+	import { BadgeCheckSolid, CloseCircleSolid } from 'flowbite-svelte-icons';
+	
 
 	let submitModal = false;
+	let phoneErrorModal = false; // Controls the phone error modal
 	let formValues = {
 		fullName: "",
 		contactNumber: "",
@@ -15,12 +15,6 @@ page.svelte
 		additionalInfo: "",
 	};
 	let termsAccepted = false;
-	let phoneError = ""; // Error message for invalid phone number
-	
-	// Reactive statement to toggle "Others" input requirement and clear value if not needed
-	$: if (formValues.typeOfAssistance !== 'others') {
-		formValues.others = ""; // Clear "Others" input if "Others" is not selected
-	}
 
 	// Function to validate the phone number format
 	function isValidPhoneNumber(phoneNumber: string) {
@@ -33,21 +27,20 @@ page.svelte
 		
 		// Check if phone number is valid
 		if (!isValidPhoneNumber(formValues.contactNumber)) {
-			phoneError = "Please enter a valid Philippine contact number starting with +63 or 09";
+			phoneErrorModal = true; // Show the error modal if phone number is invalid
 			return;
-		} else {
-			phoneError = ""; // Clear error if phone number is valid
 		}
 
 		// Proceed if form is valid
 		if (event.target instanceof HTMLFormElement && event.target.checkValidity()) {
-			submitModal = true; // Open modal if form is valid
+			submitModal = true; // Open submit modal if form is valid
 		}
 	}
 
-	// Function to close the modal and reset the form
+	// Function to close the modals and reset the form
 	function resetForm() {
 		submitModal = false;
+		phoneErrorModal = false;
 		formValues = {
 			fullName: "",
 			contactNumber: "",
@@ -57,21 +50,15 @@ page.svelte
 			additionalInfo: "",
 		};
 		termsAccepted = false; // Uncheck the checkbox
-		phoneError = ""; // Clear phone error on reset
 	}
 </script>
 
 <style>
 	.bg {
 		background-color: #03045E;
-		margin-top: 20px;
+		margin-top: 50px;
 		padding: 20px;
 		color: #FFFFFF;
-	}
-	.error {
-		color: red;
-		font-size: 0.875rem;
-		margin-top: 0.25rem;
 	}
 </style>
 
@@ -101,9 +88,6 @@ page.svelte
 								placeholder="Input your Contact Number"
 								required
 							/>
-							{#if phoneError}
-								<div class="error">{phoneError}</div>
-							{/if}
 						</div>
 					</div>
 
@@ -173,11 +157,23 @@ page.svelte
 			</Card>
 		</div>
 	</main>
+
+	<!-- Success Modal -->
 	<Modal bind:open={submitModal} size="xs" autoclose>
 		<div class="text-center">
 			<BadgeCheckSolid class="mx-auto mb-4 w-12 h-12 text-black" />
-			<h3 class="mb-5 text-lg font-normal text-black ">Please wait for a couple of minutes to give your assistance needed</h3>
+			<h3 class="mb-5 text-lg font-normal text-black">Please wait for a couple of minutes to receive the assistance needed</h3>
 			<Button color="blue" on:click={resetForm}>Close</Button>
+		</div>
+	</Modal>
+
+	<!-- Phone Error Modal -->
+	<Modal bind:open={phoneErrorModal} size="xs" autoclose>
+		<div class="text-center">
+			<CloseCircleSolid class="mx-auto mb-4 w-12 h-12 text-red-700" />
+			<h3 class="mb-5 text-lg font-normal text-black">Invalid Contact Number</h3>
+			<p>Please enter a valid Philippines contact number starting with +63 or 09.</p>
+			<Button color="red" on:click={() => phoneErrorModal = false}>Close</Button>
 		</div>
 	</Modal>
 </div>

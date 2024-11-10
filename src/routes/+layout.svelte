@@ -25,24 +25,24 @@
          <!-- <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" /> -->
        
            
-         <!-- <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> 
+         <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> 
  
    <h1 class="font-bold text-black"> EMERGENCY HOTLINE</h1>
          <div class="flex-grow space-x-16 hidden lg:flex text-2xl" style="margin-left: 290px">
             <a href="/" class="text-primary hover:underline font-bold text-black">HOME</a>
             <a href="/request" class="text-primary hover:underline font-bold text-black">REQUEST</a>
             <a href="/contact" class="text-primary hover:underline font-bold text-black">CONTACTS</a>
-        </div> -->
+        </div>
 
 
     <!-- svelte-ignore a11y_missing_attribute -->
-    <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" />
+    <!-- <img src="/project2/logo.png" class="me-3 h-6 sm:h-9" style="margin-left: 50px;" />
        <h1 class="font-bold text-black"> EMERGENCY HOTLINE</h1>
         <div class="flex-grow space-x-16 hidden lg:flex text-2xl" style="margin-left: 310px">
            <a href="/project2/" class="text-primary hover:underline font-bold text-black">HOME</a>
            <a href="/project2/request" class="text-primary hover:underline font-bold text-black">REQUEST</a>
            <a href="/project2/contact" class="text-primary hover:underline font-bold text-black">CONTACTS</a>
-       </div> 
+       </div>  -->
 
 
         <div class="lg:hidden"> 
@@ -56,11 +56,11 @@
     </div> 
 
     {#if menuOpen}
-        <!-- <div class=" text-white space-y-2 px-4 py-2 lg:hidden">
+        <div class=" text-white space-y-2 px-4 py-2 lg:hidden">
             <a href="/" class="block text-black hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
             <a href="/request" class="block text-black hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>
             <a href="/contact" class="block text-black hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Contact Me</a>
-        </div> -->
+        </div>
         <div class="bg-yellow-500  text-white space-y-2 px-4 py-2 lg:hidden">
             <a href="/project2/" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Home</a>
             <a href="/project2/request" class="block text-white hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-500 font-semibold rounded-lg px-4 py-2 transition duration-200">Request</a>

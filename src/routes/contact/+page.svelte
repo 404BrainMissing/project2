@@ -1,16 +1,38 @@
 <script lang="ts">
-	import { Card, Input, Button, Tabs, TabItem, } from "flowbite-svelte";
+	import { Card, Input, Button, Tabs, TabItem, Modal, } from "flowbite-svelte";
 	import Label from "flowbite-svelte/Label.svelte";
   import * as Icon from 'flowbite-svelte-icons';
-
-
-	let formValues2 = {
+  import { BadgeCheckSolid } from 'flowbite-svelte-icons';
+	import formValidator2 from "$lib/formValidator2";  // Import formValidator2
+	
+	let formValues = {
 		FullName: "",
 		Number: "",
 		email: "",
 		reason: "",
-
 	};
+
+	let errors: Record<string, string> = {};  // Object to store validation errors
+    let showModal = false;  // Boolean to control modal visibility
+
+// Function to handle form submission
+function handleSubmit(event: Event) {
+  event.preventDefault();
+  
+  // Call the formValidator2 function to validate the form values
+  errors = formValidator2(formValues);
+  
+  // Check if there are no validation errors before showing modal
+  if (Object.keys(errors).length === 0) {
+    console.log("Form submitted successfully:", formValues);
+    showModal = true;  // Show modal on successful submission
+    // Reset form values
+    formValues = { FullName: "", Number: "", email: "", reason: "" };
+  } else {
+    console.log("Validation errors:", errors);
+  }
+}
+	
 </script>
 
 <!-- svelte-ignore css_unused_selector -->
@@ -41,86 +63,96 @@
 	}
 </style>
 
-
 <div class="bg min-h-screen flex items-center justify-center">
-    
 	<div class="w-full max-w-lg px-4">
 		<h1 class="text-center text-3xl font-bold m-px">CONTACT FORM</h1>
-
 		<div class="flex flex-col gap-8 mt-6">
 			<Card size="none">
-				<form class="flex flex-col gap-8">
-					<!-- Personal Information Section -->
+				<form class="flex flex-col gap-8" on:submit={handleSubmit}>
+					<!-- Full Name Field -->
 					<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
 						<div>
-							<Label class="mb-2 inline-block ">Full Name</Label>
+							<Label class="mb-2 inline-block">Full Name</Label>
 							<Input
 								type="text"
-								name="fullName"
-								bind:value={formValues2.FullName}
+								bind:value={formValues.FullName}
 								placeholder="Input your Full Name"
 								required
 							/>
+							{#if errors.FullName}
+								<p class="text-red-500 text-sm">{errors.FullName}</p>
+							{/if}
 						</div>
 					</div>
-
-					<!-- Address and Assistance Type Section -->
+					
+					<!-- E-mail Field -->
 					<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
 						<div>
 							<Label class="mb-2 inline-block">E-mail</Label>
 							<Input
-								type="text"
-								name="address"
-								bind:value={formValues2.email}
+								type="email"
+								bind:value={formValues.email}
 								placeholder="email@gmail.com or email@yahoo.com"
 								required
 							/>
+							{#if errors.email}
+								<p class="text-red-500 text-sm">{errors.email}</p>
+							{/if}
 						</div>
 					</div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+					<!-- Phone Number Field -->
+					<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
 						<div>
 							<Label class="mb-2 inline-block">Phone Number</Label>
 							<Input
 								type="text"
-								name="contactNumber"
-								bind:value={formValues2.Number}
+								bind:value={formValues.Number}
 								placeholder="09++++++++++"
 								required
 							/>
+							{#if errors.Number}
+								<p class="text-red-500 text-sm">{errors.Number}</p>
+							{/if}
 						</div>
 					</div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+					<!-- Reason for Contact Field -->
+					<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
 						<div>
 							<Label class="mb-2 inline-block">Reason for Contact</Label>
 							<Input
 								type="text"
-								name="others"
-								bind:value={formValues2.reason}
+								bind:value={formValues.reason}
 								placeholder="Your reason for Contact"
 								required
 							/>
+							{#if errors.reason}
+								<p class="text-red-500 text-sm">{errors.reason}</p>
+							{/if}
 						</div>
 					</div>
 
 					<!-- Form Buttons -->
-					<div class="flex flex-col sm:flex-row justify-between mt-6 gap-2 ">
-						<Button color="blue" type="reset">Clear Form</Button>
-						<Button type="submit" color="blue" >Submit <svg class="w-[20px] h-[20px] text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-                          </svg>
-                          </Button>
+					<div class="flex flex-col sm:flex-row justify-between mt-6 gap-2">
+						<Button color="blue" type="reset" on:click={() => formValues = { FullName: "", Number: "", email: "", reason: "" }}>Clear Form</Button>
+						<Button type="submit" color="blue">Submit</Button>
 					</div>
 				</form>
 			</Card>
-		
+		</div>
 	</div>
-
 </div>
 
-</div>
-
+<!-- Modal for Successful Submission -->
+<Modal bind:open={showModal} on:close={() => showModal = false} size="xs" autoclose>
+	<div class="text-center">
+    <BadgeCheckSolid class="mx-auto mb-4 w-12 h-12 text-black" />
+		<h3 class="mb-5 text-lg font-normal text-black">Form submitted successfully!</h3>
+		<p class="text-gray-700 mb-6">Thank you for reaching out. Your safety is our priority.</p>
+		<Button on:click={() => showModal = false} color="blue">Close</Button>
+	</div>
+</Modal>
 
     <div>
         <div class="bd">
