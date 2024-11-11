@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Card, Input, Button, Tabs, TabItem, Modal, } from "flowbite-svelte";
+	import { Card, Input, Button, Modal, Tabs, TabItem } from "flowbite-svelte";
 	import Label from "flowbite-svelte/Label.svelte";
   import * as Icon from 'flowbite-svelte-icons';
   import { BadgeCheckSolid } from 'flowbite-svelte-icons';
-	import formValidator2 from "$lib/formValidator2";  // Import formValidator2
-	
+	import formValidator2 from "$lib/formValidator2"; 
+
 	let formValues = {
 		FullName: "",
 		Number: "",
@@ -12,41 +12,44 @@
 		reason: "",
 	};
 
-	let errors: Record<string, string> = {};  // Object to store validation errors
-    let showModal = false;  // Boolean to control modal visibility
+	let errors: Record<string, string> = {};  
+	let showSuccessModal = false; 
+	let showErrorModal = false; 
 
-// Function to handle form submission
-function handleSubmit(event: Event) {
-  event.preventDefault();
-  
-  // Call the formValidator2 function to validate the form values
-  errors = formValidator2(formValues);
-  
-  // Check if there are no validation errors before showing modal
-  if (Object.keys(errors).length === 0) {
-    console.log("Form submitted successfully:", formValues);
-    showModal = true;  // Show modal on successful submission
-    // Reset form values
-    formValues = { FullName: "", Number: "", email: "", reason: "" };
-  } else {
-    console.log("Validation errors:", errors);
-  }
-}
-	
+	// Function to handle form submission
+	function handleSubmit(event: Event) {
+		event.preventDefault();
+
+		// Call the formValidator2 function to validate the form values
+		errors = formValidator2(formValues);
+
+		// Debug: Log errors and modal states
+		console.log("Errors:", errors);
+
+		// Check if there are validation errors and print the console message
+		if (Object.keys(errors).length === 0) {
+      console.log("Form submitted successfully:", formValues);
+			showSuccessModal = true;
+			formValues = { FullName: "", Number: "", email: "", reason: "" };
+		} else {
+			showErrorModal = true;
+			console.log("Error modal should now be true:", showErrorModal);
+		}
+	}
 </script>
 
 <!-- svelte-ignore css_unused_selector -->
 <style>
-    /* Custom styles for responsiveness */
+
     @media (max-width: 640px) {
     .tab-content {
-      padding: 1rem; /* Padding for mobile view */
+      padding: 1rem; 
     }
   }
 
   @media (min-width: 641px) {
     .tab-content {
-      padding: 2rem; /* Padding for larger screens */
+      padding: 2rem; 
     }
   }
 	.bg {
@@ -63,6 +66,9 @@ function handleSubmit(event: Event) {
 	}
 </style>
 
+	<!-- Forms -->
+<!-- Form -->
+<!-- Form -->
 <div class="bg min-h-screen flex items-center justify-center">
 	<div class="w-full max-w-lg px-4">
 		<h1 class="text-center text-3xl font-bold m-px">CONTACT FORM</h1>
@@ -79,9 +85,6 @@ function handleSubmit(event: Event) {
 								placeholder="Input your Full Name"
 								required
 							/>
-							{#if errors.FullName}
-								<p class="text-red-500 text-sm">{errors.FullName}</p>
-							{/if}
 						</div>
 					</div>
 					
@@ -95,9 +98,6 @@ function handleSubmit(event: Event) {
 								placeholder="email@gmail.com or email@yahoo.com"
 								required
 							/>
-							{#if errors.email}
-								<p class="text-red-500 text-sm">{errors.email}</p>
-							{/if}
 						</div>
 					</div>
 
@@ -111,9 +111,6 @@ function handleSubmit(event: Event) {
 								placeholder="09++++++++++"
 								required
 							/>
-							{#if errors.Number}
-								<p class="text-red-500 text-sm">{errors.Number}</p>
-							{/if}
 						</div>
 					</div>
 
@@ -127,9 +124,6 @@ function handleSubmit(event: Event) {
 								placeholder="Your reason for Contact"
 								required
 							/>
-							{#if errors.reason}
-								<p class="text-red-500 text-sm">{errors.reason}</p>
-							{/if}
 						</div>
 					</div>
 
@@ -145,23 +139,35 @@ function handleSubmit(event: Event) {
 </div>
 
 <!-- Modal for Successful Submission -->
-<Modal bind:open={showModal} on:close={() => showModal = false} size="xs" autoclose>
+<Modal bind:open={showSuccessModal} on:close={() => showSuccessModal = false} size="xs" autoclose>
 	<div class="text-center">
     <BadgeCheckSolid class="mx-auto mb-4 w-12 h-12 text-black" />
 		<h3 class="mb-5 text-lg font-normal text-black">Form submitted successfully!</h3>
 		<p class="text-gray-700 mb-6">Thank you for reaching out. Your safety is our priority.</p>
-		<Button on:click={() => showModal = false} color="blue">Close</Button>
+		<Button on:click={() => showSuccessModal = false} color="blue">Close</Button>
 	</div>
 </Modal>
 
+<!-- Modal for Errors -->
+<Modal bind:open={showErrorModal} on:close={() => showErrorModal = false} size="xs" autoclose>
+	<div class="text-center">
+		<h3 class="mb-5 text-lg font-normal text-black">Form submission failed</h3>
+		<p class="text-gray-700 mb-4">Please correct the following errors:</p>
+		<ul class="text-left text-red-500 list-disc list-inside">
+			{#each Object.entries(errors) as [field, message]}
+				<li>{message}</li>
+			{/each}
+		</ul>
+		<Button on:click={() => showErrorModal = false} color="red">Close</Button>
+	</div>
+</Modal>
+
+      	<!-- For emergency hotlines -->
     <div>
         <div class="bd">
-            <!-- <div> -->
                 <h1 class="text-center text-3xl font-bold m-px flex items-center justify-center gap-2">
-                        <!-- Icon with Tailwind CSS color and size adjustments -->
-                     
-                        OLONGAPO CITY EMERGENCY HOTLINES<Icon.PhoneSolid class="w-10 h-10 " />
-                      </h1>
+                  OLONGAPO CITY EMERGENCY HOTLINES<Icon.PhoneSolid class="w-10 h-10 " />
+                </h1>
                    
    <Card size="none" class="mt-2">
 

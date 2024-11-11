@@ -8,17 +8,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* Optional: make text white for contrast */
+    color: white; 
   }
   .container {
     margin-top: 10px;
     text-align: center;
   }
   h1, h3 {
-    color: white; /* Ensures text is visible against dark background */
+    color: white; 
   }
 </style>
-
+<!-- for welcome page-->
 <div class="body">
 <div class="container">
   <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 mb-4">

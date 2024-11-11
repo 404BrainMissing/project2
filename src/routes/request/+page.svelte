@@ -16,26 +16,43 @@
 	};
 	let termsAccepted = false;
 
-	// Function to validate the phone number format
+	// Function to validate the phone number format using regex
 	function isValidPhoneNumber(phoneNumber: string) {
 		const regex = /^(09\d{9}|\+63\d{10})$/;
 		return regex.test(phoneNumber);
 	}
 
 	function handleFormSubmit(event: Event) {
-		event.preventDefault();
-		
-		// Check if phone number is valid
-		if (!isValidPhoneNumber(formValues.contactNumber)) {
-			phoneErrorModal = true; // Show the error modal if phone number is invalid
-			return;
-		}
+	event.preventDefault();
 
-		// Proceed if form is valid
-		if (event.target instanceof HTMLFormElement && event.target.checkValidity()) {
-			submitModal = true; // Open submit modal if form is valid
-		}
+	// Object to store validation errors
+	let errors: Record<string, string> = {};
+
+	// Validate the contact number
+	if (!isValidPhoneNumber(formValues.contactNumber)) {
+		errors.contactNumber = "Invalid contact number format";
+		phoneErrorModal = true; // Show phone error modal
 	}
+
+	// Check if there are no validation errors before showing the success modal
+	if (Object.keys(errors).length === 0) {
+		console.log("Form submitted successfully:", formValues);
+		submitModal = true; // Show success modal
+
+		// Reset form values after submission
+		formValues = {
+			fullName: "",
+			contactNumber: "",
+			address: "",
+			others: "",
+			typeOfAssistance: "",
+			additionalInfo: "",
+		};
+		termsAccepted = false; // Uncheck the terms checkbox
+	} else {
+		console.log("Validation errors:", errors);
+	}
+}
 
 	// Function to close the modals and reset the form
 	function resetForm() {
@@ -66,6 +83,7 @@
 	<h1 class="text-center text-3xl font-bold mt-6">EMERGENCY REQUEST FORM</h1>
 	<main class="mx-auto w-full max-w-xl p-8 mt-8 bg-white rounded-lg shadow-md">
 		<div class="flex flex-col gap-8">
+				<!-- Forms -->
 			<Card size="none">
 				<form class="flex flex-col gap-6" on:submit={handleFormSubmit}>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">

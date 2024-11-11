@@ -55,7 +55,7 @@ test('should call alert with error message if required fields are missing', () =
 
 test("Returns error for invalid contact number (wrong format)", () => {
 	const formValues = {
-		FullName: "Robert",
+		FullName: "Al Jhon Dupal",
 		Number: "12345678901", // invalid number format
 		email: "robert@gmail.com",
 		reason: "Inquiry"
@@ -68,9 +68,9 @@ test("Returns error for invalid contact number (wrong format)", () => {
 
 test("Returns error for email not from @gmail.com or @yahoo.com", () => {
 	const formValues = {
-		FullName: "Robert",
+		FullName: "Marron Flores",
 		Number: "09123456789",
-		email: "robert@outlook.com", // invalid domain
+		email: "marronflores@outlook.com", // invalid domain
 		reason: "Inquiry"
 	};
 
