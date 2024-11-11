@@ -22,7 +22,7 @@
     <div class="container mx-auto flex justify-between items-center">
     
         <!-- For local  --> 
-         <img src="/logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> 
+         <img src="./logo.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" style="margin-left: 50px;" /> 
          <h1 class="font-bold text-black"> EMERGENCY HOTLINE</h1>
          <div class="flex-grow space-x-16 hidden lg:flex text-2xl" style="margin-left: 290px">
             <a href="./" class="text-primary hover:underline font-bold text-black">HOME</a>

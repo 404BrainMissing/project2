@@ -1,9 +1,9 @@
 <script>
   let images = [
-    '/Ambulance.png',
-    '/Boat.png',
-    '/DisasterFoodTruck.png',
-    '/Firetruck.png'
+    './Ambulance.png',
+    './Boat.png',
+    './DisasterFoodTruck.png',
+    './Firetruck.png'
   ];
   let currentImageIndex = 0;
 
