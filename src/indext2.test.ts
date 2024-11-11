@@ -41,10 +41,8 @@ test('should call alert with error message if required fields are missing', () =
         reason: ''                  // missing Reason
     };
 
-    // Run the form validator
     const errors = formValidator2(formValues);
-
-    // Check if the errors object is populated
+    
     if (Object.keys(errors).length > 0) {
         globalThis.alert("Please fill in all required fields and ensure quantity is valid.");
     }

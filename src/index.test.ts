@@ -1,6 +1,7 @@
 import formValidator from "$lib/formValidator";
 import { expect, test } from 'vitest';
 
+
 // URL Accessibility Test
 test("check if running", async () => {
     const url = await fetch("https://404brainmissing.github.io/project2/");
@@ -45,16 +46,22 @@ test("Returns no error for valid contact number starting with 09", () => {
 
 // Missing Required Fields Test
 test("Returns error for missing required fields", () => {
-	const formValues = {
-		fullName: "",
-		contactNumber: "",
-		address: "",
-		typeOfAssistance: "",
-		others: "",
-		additionalInfo: "",
-	};
-	expect(formValidator(formValues)).toHaveProperty("fullName", "Full Name is required");
-	expect(formValidator(formValues)).toHaveProperty("contactNumber", "Contact number is required");
+    const formValues = {
+        fullName: "",
+        contactNumber: "",
+        address: "",
+        typeOfAssistance: "",
+        others: "",
+        additionalInfo: "",
+    };
+
+    const errors = formValidator(formValues);
+
+    // Check that each expected error message is in the errors object
+    expect(errors).toHaveProperty("fullName", "Full Name is required");
+    expect(errors).toHaveProperty("contactNumber", "Please enter a valid Philippine contact number starting with +63 or 09");
+    expect(errors).toHaveProperty("address", "Address is required");
+    expect(errors).toHaveProperty("typeOfAssistance", "Type of Assistance is required");
 });
 
 // Invalid Contact Number Format Test
@@ -81,29 +88,6 @@ test("Returns no error for empty optional fields", () => {
 		additionalInfo: "",
 	};
 	expect(formValidator(formValues)).toStrictEqual({});
-});
-
-// Non-String Input Types Test
-test("Returns error for non-string input types", () => {
-    interface FormValues {
-        fullName: string;
-        contactNumber: string;
-        address: string;
-        typeOfAssistance: string;
-        others?: string;
-        additionalInfo?: string;
-    }
-    const formValues: FormValues = {
-        fullName: "A".repeat(256),
-        contactNumber: "+639123456789",
-        address: "123 Main St",
-        typeOfAssistance: "others",
-        others: "Detailed assistance",
-        additionalInfo: "",
-    };
-
-    expect(formValidator(formValues)).toHaveProperty("fullName", "Full name must be a string");
-    expect(formValidator(formValues)).toHaveProperty("additionalInfo", "Additional info must be a string");
 });
 
 

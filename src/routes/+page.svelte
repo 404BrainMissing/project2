@@ -27,19 +27,7 @@
     overflow: hidden;
   }
 
-  .background-image {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    opacity: 0.2;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out; 
-  }
-
+  
   .container {
     position: relative;
     z-index: 1;
@@ -54,10 +42,12 @@
 </style>
 
 <div class="body">
+  <!-- svelte-ignore element_invalid_self_closing_tag -->
   <div 
-    class="background-image" 
-    style="background-image: url('{images[currentImageIndex]}')"
-  ></div>
+  class="absolute top-1/2 left-1/2 w-full h-full transform -translate-x-1/2 -translate-y-1/2 scale-[0.8] max-w-full max-h-full opacity-20 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-in-out"
+  style="background-image: url('{images[currentImageIndex]}')"
+/>
+
   <div class="container">
     <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 mb-4">
       Welcome to Emergency Hotline and Disaster Readiness Application
