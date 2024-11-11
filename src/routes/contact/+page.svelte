@@ -108,7 +108,7 @@
 							<Input
 								type="text"
 								bind:value={formValues.Number}
-								placeholder="09++++++++++"
+								placeholder="09123456789 or +639123456789"
 								required
 							/>
 						</div>
